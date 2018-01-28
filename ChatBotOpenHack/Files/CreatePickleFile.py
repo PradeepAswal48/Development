@@ -62,14 +62,15 @@ def create_utter_vectors(utterances, vocab_size, vocab_to_int, clean_data, prere
     for idx, row in utterances.iterrows():
         layer_0 = [0] * vocab_size
         sent = row['utterance']
-        print("vocab size is ", vocab_size)
-        print(layer_0)
+        # print("vocab size is ", vocab_size)
+        # print(layer_0)
         sent = clean_data(sent, prerep_dict, postrep_dict, stop_words)
         print(sent)
         for word in sent.split():
             print("for word : ",word)
             if (word in vocab_to_int.keys()):
                 layer_0[vocab_to_int[word]] = 1
+                print(layer_0," FOR ", word)
         utter_dict[row['utter_id']] = layer_0
     print(utter_dict)
     return utter_dict
@@ -125,7 +126,8 @@ def loadingData(utter_file, intent_file, vocab_file, stopwords_file, prerepdict_
 utterances,intents, vocab, vocab_to_int, vocab_size,stop_words,prerep_dict,postrep_dict, regexs=loadingData(utter_file, intent_file, vocab_file, stopwords_file, prerepdict_file, postrepdict_file, regex_file)
 utter_array , utterid_array = vectorizer(utterances, vocab_size, vocab_to_int, prerep_dict, postrep_dict,
                                          stop_words)
-print(utter_array, utterid_array)
+# print(utter_array, utterid_array)
+print("utter array", utter_array)
 with open('chat_pkl.pkl', 'wb') as f:
     pickle.dump((utter_array,utterid_array,utterances,intents,vocab,vocab_to_int,vocab_size,stop_words, prerep_dict,
                  postrep_dict, regexs),f)

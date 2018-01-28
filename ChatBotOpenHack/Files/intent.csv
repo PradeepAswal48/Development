@@ -1,2 +1,6 @@
 intent_id,Intent,Response,parent_id
-1,Intro,"what's up Bro !!",0
+404,unknown,"Are you speaking english cuz i dont seem to understand you !!",0
+101,intro,"Hello",1
+101,intro,"what's up Bro !!",1
+102,sal,"I am fine. thank you",6
+

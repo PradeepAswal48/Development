@@ -1,8 +1,8 @@
 utter_id,utterance,intent_id
-1,Hi,1
-1,Hello,1
-1,Good morning,1
-1,Good afternoon,1
-1,Good evening,1
-1,Hi Sheero,1
-1,Hello Sheero,1
+1,hi,101
+2,hello,101
+3,good morning,101
+4,good afternoon,101
+5,good evening,101
+6,how are you,102
+7,hello sheero,101
