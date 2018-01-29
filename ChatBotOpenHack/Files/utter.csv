@@ -4,5 +4,5 @@ utter_id,utterance,intent_id
 3,good morning,101
 4,good afternoon,101
 5,good evening,101
-6,how are you,102
+6,how are you,1012
 7,hello sheero,101

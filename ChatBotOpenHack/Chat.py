@@ -5,7 +5,7 @@ import re
 import pickle
 import json
 
-threshold = 60  # Confidence threshold
+threshold = 40  # Confidence threshold
 unknown_intent = 404
 with open('Files/chat_pkl.pkl', 'rb') as f:
     (utter_array, utterid_array, utterances, intents, vocab, vocab_to_int, vocab_size,
@@ -153,6 +153,7 @@ def chat(input_text, context_id, input_code, from_orc):
     # print("regexs", regexs)
     # print("input text is ",input_text)
     response, confidence, intent_id_best, context_id,  = pred(input_text, vocab_size, vocab_to_int,utter_array, intents, context_id, from_orc,input_code, regexs)
+    print(context_id)
     print(response)
 
-chat("how are you ?",1,"O",0)
+chat("hi",101,"O",0)
